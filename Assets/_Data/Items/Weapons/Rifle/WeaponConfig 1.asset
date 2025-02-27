@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294b81949a94433aa4af099f9e8ddb39, type: 3}
+  m_Name: WeaponConfig 1
+  m_EditorClassIdentifier: 
+  <ItemData>k__BackingField:
+    ItemType: 1
+    Icon: {fileID: 21300000, guid: 6dc2e2c7d24eb1b4cab27008747e6352, type: 3}
+    Weight: 7
+    Stack: 1
+    Count: 1
+    SubType: 1
+  <BulletConfig>k__BackingField: {fileID: 11400000, guid: 55f3c21609f42b640b7e515cdff907c3, type: 2}

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Configs
+  m_EditorClassIdentifier: 
+  m_GroupName: Configs
+  m_GUID: c551e52c34cba9145b1b1bb9ce3a132b
+  m_SerializeEntries:
+  - m_GUID: 22900648f9081024783ed33c48c2efc9
+    m_Address: Assets/_Data/Hud/SlotConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed6e5231cb1759e459a6d38633651023
+    m_Address: Assets/_Data/Items/ItemsConfigs.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0ce76afb2925d7448b510f060a6edfe9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 592cf1835e3f44c41be85e795b78a35d, type: 2}
+    - {fileID: 11400000, guid: 62a94696b368d7547ab9f4f2950c9e40, type: 2}
