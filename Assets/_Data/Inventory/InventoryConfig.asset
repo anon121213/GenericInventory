@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92dcbe77c96445a89e384ef21076bf1b, type: 3}
   m_Name: InventoryConfig
   m_EditorClassIdentifier: 
-  <InventorySlots>k__BackingField: 0
+  <InventorySlots>k__BackingField: 30

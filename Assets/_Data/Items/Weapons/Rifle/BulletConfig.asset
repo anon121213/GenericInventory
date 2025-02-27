@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BulletConfig
   m_EditorClassIdentifier: 
   <ItemData>k__BackingField:
-    ItemType: 0
-    Icon: {fileID: 0}
-    Weight: 0
-    Stack: 0
-    Count: 0
-    SubType: 0
+    ItemType: 3
+    Icon: {fileID: 21300000, guid: 252f6bdbbd225254985a0f6ebf04826a, type: 3}
+    Weight: 0.5
+    Stack: 60
+    Count: 1
+    SubType: 2

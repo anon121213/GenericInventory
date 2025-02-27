@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Data.Configs.Items.Items.Item;
@@ -64,7 +65,7 @@ namespace _Scripts.Gameplay.Items.UISetter
         {
           slot.TrySetItem(itemData, itemType, subType, Math.Min(maxAddable, itemData.Stack));
           maxAddable -= itemData.Stack;
-          
+
           if (maxAddable < 0)
             return true;
         }
@@ -78,21 +79,34 @@ namespace _Scripts.Gameplay.Items.UISetter
     {
       if (!_backpack.TryRemoveItemCount(itemType, subType, count, out List<ItemStack> stacks))
         return false;
+      
+      var occupiedSlots = _slotsFactory.Slots
+        .Where(x => Equals(x.SubType, subType) && Equals(x.ItemType, itemType) && !x.IsClearSlot)
+        .OrderByDescending(x => x.SlotSettings.Count) 
+        .ToList();
 
-      InventorySlot slot = _slotsFactory.Slots.FirstOrDefault(x =>
-        !x.IsClearSlot && Equals(x.SubType, subType) && Equals(x.ItemType, itemType));
+      int totalAvailable = occupiedSlots.Sum(x => x.SlotSettings.Count);
+      if (totalAvailable < count)
+        return false; 
 
-      if (slot == null)
-        return true;
+      int remainingToRemove = count;
 
-      if (stacks == null)
-        slot.ClearItem();
-      else
-        foreach (var stack in stacks)
-          slot.TrySetItem(stack.ItemData, itemType, subType, count);
+      foreach (var slot in occupiedSlots)
+      {
+        if (remainingToRemove <= 0)
+          return true;
 
-      return false;
+        int removeAmount = Math.Min(remainingToRemove, slot.SlotSettings.Count);
+        slot.TrySetItem(slot.SlotSettings.Item, itemType, subType, -removeAmount);
+        remainingToRemove -= removeAmount;
+
+        if (slot.SlotSettings.Count == 0)
+          slot.ClearItem(); 
+      }
+
+      return true;
     }
+
 
     public bool TryRemoveStackItem(ItemType itemType, Enum subType)
     {

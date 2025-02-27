@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Config
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd5df9926bad66a45a320d842e3e658d
+    m_Address: Assets/_Data/Inventory/InventoryConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Config
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0ce76afb2925d7448b510f060a6edfe9, type: 2}
   m_SchemaSet:

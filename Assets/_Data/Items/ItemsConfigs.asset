@@ -19,5 +19,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 35e64b232deae1449ab09c409bcdfba6, type: 2}
   - {fileID: 11400000, guid: adafd425c73d33a45a2fedc441d5de09, type: 2}
   <Bullets>k__BackingField:
-  - {fileID: 11400000, guid: 9e6736117be9c22438f80f8d0f229bd6, type: 2}
   - {fileID: 11400000, guid: 55f3c21609f42b640b7e515cdff907c3, type: 2}
+  - {fileID: 11400000, guid: 9e6736117be9c22438f80f8d0f229bd6, type: 2}

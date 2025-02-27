@@ -35,7 +35,7 @@ namespace _Scripts.Gameplay.ActionButtons.Reload
           break;
         
         case BulletsType.Rifle:
-          config = _staticDataProvider.GetItemsConfigs().GetItemConfig(ItemType.Bullets, BulletsType.Pistol);
+          config = _staticDataProvider.GetItemsConfigs().GetItemConfig(ItemType.Bullets, BulletsType.Rifle);
           _itemsSetter.TrySetItem(ItemType.Bullets, config.SubType, config.ItemDataBase, config.ItemDataBase.Stack);
           break;
       }

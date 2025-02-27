@@ -61,13 +61,16 @@ namespace _Scripts.Infrastructure.Bootstrapper
       var configs = _staticDataProvider.GetItemsConfigs();
 
       foreach (var config in configs.Bullets)
-        _itemsSetter.TrySetItem(config.ItemData.ItemType, config.ItemData.SubType, config.ItemData, 1); 
+        _itemsSetter.TrySetItem(config.ItemData.ItemType, 
+          config.ItemData.SubType, config.ItemData, config.ItemData.Count); 
       
       foreach (var config in configs.Weapons) 
-        _itemsSetter.TrySetItem(config.ItemData.ItemType, config.ItemData.SubType, config.ItemData, 1);
+        _itemsSetter.TrySetItem(config.ItemData.ItemType, 
+          config.ItemData.SubType, config.ItemData, config.ItemData.Count);
       
       foreach (var config in configs.Gears) 
-        _itemsSetter.TrySetItem(config.ItemData.ItemType, config.ItemData.SubType, config.ItemData, 1);
+        _itemsSetter.TrySetItem(config.ItemData.ItemType,
+          config.ItemData.SubType, config.ItemData, config.ItemData.Count);
     }
   }
 }
